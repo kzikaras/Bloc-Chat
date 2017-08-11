@@ -1,5 +1,5 @@
-
-<div ng-controller="RoomCtrl as room">
-    <h1>{{ room.rooms }}</h1>
+{{ room }}
+<div ng-controller="HomeCtrl as home" ng-repeat="room in home.rooms">
+    <h1>{{ room.$value }}</h1>
 </div>
     
