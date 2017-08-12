@@ -1,5 +1,10 @@
-{{ room }}
-<div ng-controller="HomeCtrl as home" ng-repeat="room in home.rooms">
-    <h1>{{ room.$value }}</h1>
-</div>
+<section class="sidebar">
+    <h1>Bloc Chat</h1>
+    <div ng-controller="HomeCtrl as home">
+        <h2 ng-click="home.open('sm')">New Room<h2>
+    </div>
+    <div ng-controller="HomeCtrl as home" ng-repeat="room in home.rooms">
+        <h1>{{ room.$value }}</h1>
+    </div>
+</section>
     
