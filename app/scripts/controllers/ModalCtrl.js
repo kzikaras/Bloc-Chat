@@ -1,15 +1,24 @@
 (function() {
-    function ModalCtrl($uibModal) {
+    function ModalCtrl($uibModal, Room) {
         this.open = function() {
             $uibModal.open({
                 animation: true  
             })
         }
 
+        this.text = 'some text';
+        this.sendOff = function(text){
+            Room.add(text);
+        }
+
+        
+
+        
+
     }
 
 
     angular
         .module('blocChat')
-        .controller('ModalCtrl',['$uibModal', ModalCtrl])
+        .controller('ModalCtrl', ['Room', ModalCtrl])
 })();

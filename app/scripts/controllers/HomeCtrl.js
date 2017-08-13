@@ -3,12 +3,14 @@
         this.test = "test";
         this.rooms = Room.all;
         
-        this.open = function($uibModal) {
+        this.open = function() {
             $uibModal.open({
                 animation: true,
-                templateUrl: 'modal.html',
-                size: 'sm',
-                controller: 'ModalCtrl.js'
+                backdrop: true,
+                templateUrl: '/templates/modal.html',
+                size: 'md',
+                controller: 'ModalCtrl as modal'
+
             });
             
         }
