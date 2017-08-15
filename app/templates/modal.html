@@ -1,4 +1,4 @@
-<section class="modal-view" ng-controller="ModalCtrl as modal">
+<section class="modal-view">
     <h1>Create a new room</h1>
     <form ng-submit="sendOff(modal.text)">
         Enter a room name: <input type="text" ng-model="modal.text"></input>
@@ -6,7 +6,7 @@
     <button class="cancel" type="button" ng-model="singleModel" ng-click="modal.dismiss()">
         Cancel
     </button>
-    <button class="create" type="submit" id="submit" ng-model="singleModel">
+    <button class="create" type="submit" id="submit" ng-model="singleModel" ng-click="modal.sendOff()">
         Create room
     </button>
 </section>

@@ -1,14 +1,21 @@
 (function() {
-    function ModalCtrl($uibModal, Room) {
-        this.open = function() {
-            $uibModal.open({
-                animation: true  
-            })
+    function ModalCtrl(Room, $uibModalInstance) {
+        
+
+        this.text = 'some text';
+        this.sendOff = function(){
+            Room.add(this.text);
+            this.dismiss();
+        }
+
+        this.dismiss = function() {
+            $uibModalInstance.close();
         }
 
         this.text = 'some text';
-        this.sendOff = function(text){
-            Room.add(text);
+        this.sendOff = function(){
+            Room.add(this.text);
+            this.dismiss();
         }
 
         
@@ -20,5 +27,5 @@
 
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['Room', ModalCtrl])
+        .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl])
 })();
