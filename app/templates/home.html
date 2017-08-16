@@ -1,10 +1,11 @@
+
 <section class="sidebar">
     <h1>Bloc Chat</h1>
     <div ng-controller="HomeCtrl as home">
         <p class="newroom" ng-click="home.open()">New Room<p>
     </div>
-    <div ng-controller="HomeCtrl as home" ng-repeat="room in home.rooms">
-        <h3>{{ room.$value }}</h3>
+    <div ng-repeat="room in home.rooms">
+        <h3 class="room" ng-click="home.setActiveRoom(room.$value)">{{ room.$value }}</h3>
     </div>
 </section>
 
@@ -13,4 +14,10 @@
     Message: <input type="text"></input>
     </form>
 </section>
+
+<section class="chatroom">
+    <h2>{{ home.activeRoom }}</h2>
+    <h3>{{ home.messages }}</h3>
+</section>
+
     

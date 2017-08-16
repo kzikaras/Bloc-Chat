@@ -41,6 +41,13 @@ input {
     width: 70%;
 }
 
+.chatroom {
+    position: fixed;
+    display: inline-block;
+    top: 10px;
+    
+}
+
 .newroom {
     background-color: white;
     position: fixed; 
@@ -94,5 +101,9 @@ input {
 }
 
 .cancel:hover {
+    cursor: pointer;
+}
+
+.room:hover {
     cursor: pointer;
 }
