@@ -2,7 +2,7 @@
     function HomeCtrl(Room, $uibModal, Message) {
         this.test = "test";
         this.rooms = Room.all;
-        this.messages = Message.all;
+        this.messages = "";
         
         this.open = function() {
             $uibModal.open({
@@ -21,7 +21,7 @@
 
         this.setActiveRoom = function(room) {
             this.activeRoom = room;
-            
+            this.messages = Message.getByRoomId("-KrYnxUbsFVZ22f_l9F0");
         }
         
     };
