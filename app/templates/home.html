@@ -5,7 +5,7 @@
         <p class="newroom" ng-click="home.open()">New Room<p>
     </div>
     <div ng-repeat="room in home.rooms">
-        <h3 class="room" ng-click="home.setActiveRoom(room.$value)">{{ room.$value }}</h3>
+        <h3 class="room" ng-click="home.setActiveRoom(room)">{{ room.$value }}</h3>
     </div>
 </section>
 
@@ -16,8 +16,10 @@
 </section>
 
 <section class="chatroom">
-    <h2>{{ home.activeRoom }}</h2>
-    <h3>{{ home.messages }}</h3>
+    <h2>{{ home.activeRoom.$value }}</h2>
+    <div ng-repeat="message in home.messages">
+        <h3>{{ message.username }} {{ ":" }} {{ message.content }}</h3>
+    </div>
 </section>
 
     

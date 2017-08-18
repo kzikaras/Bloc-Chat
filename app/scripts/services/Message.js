@@ -1,14 +1,15 @@
 (function() {
     function Message($firebaseArray) {
         var Message = {};
-        var ref = firebase.database().ref().child("Messages");
+        var ref = firebase.database().ref().child("messages");
         var messages = $firebaseArray(ref);
 
         Message.all = messages;
 
         Message.getByRoomId = function(roomId) {
-            return $firebaseArray.child(this.Messages).orderByChild(roomId);
-            
+            var msg = $firebaseArray(ref.orderByChild("roomId").equalTo(roomId));
+            console.log(msg);
+            return msg;
         }
 
         
