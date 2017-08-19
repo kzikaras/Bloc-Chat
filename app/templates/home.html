@@ -7,6 +7,7 @@
     <div ng-repeat="room in home.rooms">
         <h3 class="room" ng-click="home.setActiveRoom(room)">{{ room.$value }}</h3>
     </div>
+    <h3> {{ currentUser }}</h3>
 </section>
 
 <section class="chatbar">
@@ -18,7 +19,7 @@
 <section class="chatroom">
     <h2>{{ home.activeRoom.$value }}</h2>
     <div ng-repeat="message in home.messages">
-        <h3>{{ message.username }} {{ ":" }} {{ message.content }}</h3>
+        <h3>{{ message.content }}</h3>
     </div>
 </section>
 

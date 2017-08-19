@@ -1,0 +1,9 @@
+<section class="modal-view">
+    <h1>Create a new username</h1>
+    <form ng-submit="submitUsername(username.text)">
+        Enter a username: <input type="text" ng-model="username.text"></input>
+    </form>
+    <button class="create" type="submit" id="submit" ng-model="singleModel" ng-click="username.submitUsername(username.text)">
+        Submit
+    </button>
+</section>

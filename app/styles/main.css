@@ -24,6 +24,10 @@ html, body {
     font-family: 'Raleway', sans-serif;
 } 
 
+body {
+    width: 100%;
+}
+
 input {
     height: 25%;
     width: 100%;
@@ -33,7 +37,8 @@ input {
 
 .chatbar {
     position: fixed; 
-    display: inline-block;
+    display: block;
+    left: 350px;
     font-size: 150%;
     bottom: 22px;
     padding-left: 15px;
@@ -68,7 +73,7 @@ input {
     background-color: rgba(26, 68, 95, 0.4);
     display: inline-block;
     height: 100%;
-    width: 30%;
+    width: 350px;
     padding-left: 8px;
     padding-top: 8px;
 }
