@@ -112,3 +112,12 @@ input {
 .room:hover {
     cursor: pointer;
 }
+
+.submit-button {
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.submit-button:hover {
+    cursor: pointer;
+}

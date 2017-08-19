@@ -11,15 +11,16 @@
 </section>
 
 <section class="chatbar">
-    <form>
-    Message: <input type="text"></input>
+    <form name="form" id="form">
+        Message: <input type="message" id="msg" ng-model="home.message"></input>
+        <button class="submit-button" id="submit" ng-model="message" ng-click="home.submitMessage(home.message)">Submit</button>
     </form>
 </section>
 
 <section class="chatroom">
     <h2>{{ home.activeRoom.$value }}</h2>
     <div ng-repeat="message in home.messages">
-        <h3>{{ message.content }}</h3>
+        <h3>{{ home.user }} {{ ":" }} {{ message.content }}</h3>
     </div>
 </section>
 
