@@ -2,4 +2,4 @@
 
 DogChat is a chat application built in Angular.js.
 
-[Imgur](https://i.imgur.com/J3GhpNW.png)
+![Imgur](https://i.imgur.com/J3GhpNW.png)
